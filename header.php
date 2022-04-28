@@ -1,6 +1,12 @@
-
+<?php
+$counter = isset($_COOKIE['counter']) ? $_COOKIE['counter'] : 0;
+$counter++;
+setcookie("counter", $counter);
+?>
 <header class="header">
-
+ <?php
+        echo "<p style='text-align: center'>Сторінку було оновлено ".$counter." разів.<p>";
+    ?> 
 </div>
         <div class="nav-1">
             <div class="nav-toggle">
